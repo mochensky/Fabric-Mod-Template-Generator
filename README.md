@@ -1,5 +1,9 @@
 # Fabric-Mod-Template-Generator
 
+## Live Preview
+
+The tool is hosted on GitHub Pages and can be accessed [here](https://mochensky.github.io/Fabric-Mod-Template-Generator/). The live preview allows users to interact with the tool directly in their browser, input their mod details, and download the generated mod template.
+
 ## Overview
 
 The Fabric Mod Template Generator is a web-based tool designed to simplify the creation of mod templates for Minecraft using the Fabric modding framework. Users can input mod-specific details, select versions for Minecraft, Fabric Loader, Yarn Mappings, Fabric API, Loom, and Gradle, and configure additional settings such as environment, license, and optional features like Mixins and README generation. Upon submission, the tool generates a ZIP file containing a complete mod template, including Gradle build files, Java source files, and configuration files tailored to the user's specifications.
@@ -16,10 +20,6 @@ The project is built with HTML, CSS, and JavaScript, utilizing libraries such as
 - Validation for input fields to ensure correct formatting (e.g., mod ID must be lowercase, main class must be a valid Java class path).
 - Dynamic generation of a ZIP file containing all necessary files for a Fabric mod project.
 - Responsive design optimized for desktop and mobile devices.
-
-## Live Preview
-
-The tool is hosted on GitHub Pages and can be accessed [here](https://mochensky.github.io/Fabric-Mod-Template-Generator/). The live preview allows users to interact with the tool directly in their browser, input their mod details, and download the generated mod template.
 
 ## Installation
 
