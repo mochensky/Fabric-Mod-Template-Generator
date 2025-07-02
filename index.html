@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabric Mod Template Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Fabric Mod Template Generator</h1>
+        <form id="modForm">
+            <div id="error" class="error hidden"></div>
+            
+            <div class="settings-section">
+                <h2>Basic Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="modName">Mod Name</label>
+                        <input type="text" id="modName" placeholder="e.g., MyMod" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modId">Mod ID</label>
+                        <input type="text" id="modId" placeholder="lowercase, e.g., mymod" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mainClass">Main Class</label>
+                        <input type="text" id="mainClass" placeholder="e.g., com.example.mymod.MyMod" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="groupId">Group ID</label>
+                        <input type="text" id="groupId" placeholder="e.g., com.example" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="artifactId">Artifact ID</label>
+                        <input type="text" id="artifactId" placeholder="e.g., mymod" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="version">Version</label>
+                        <input type="text" id="version" placeholder="e.g., 1.0.0" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h2>Versions & Dependencies</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="minecraftVersion">Minecraft Version</label>
+                        <select id="minecraftVersion" required>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="loaderVersion">Fabric Loader Version</label>
+                        <select id="loaderVersion" required>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="yarnVersion">Yarn Mappings Version</label>
+                        <select id="yarnVersion" required>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fabricApiVersion">Fabric API Version</label>
+                        <select id="fabricApiVersion" required>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="loomVersion">Loom Version</label>
+                        <select id="loomVersion" required>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gradleVersion">Gradle Version</label>
+                        <select id="gradleVersion" required>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h2>Additional Settings</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="environment">Environment</label>
+                        <select id="environment">
+                            <option value="both">Both (client & server)</option>
+                            <option value="client">Client</option>
+                            <option value="server">Server</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="license">License</label>
+                        <select id="license">
+                            <option value="MIT">MIT</option>
+                            <option value="Apache-2.0">Apache-2.0</option>
+                            <option value="All-Rights-Reserved">All-Rights-Reserved</option>
+                            <option value="GPL-3.0">GPL-3.0</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="Description (optional)"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="authors">Authors</label>
+                        <input type="text" id="authors" placeholder="comma-separated (optional)">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" placeholder="Website (optional)">
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="useMixins">
+                        <label for="useMixins">Use Mixins</label>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="createReadme">
+                        <label for="createReadme">Create README.md</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">Generate Mod Template</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
